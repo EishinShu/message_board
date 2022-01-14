@@ -1,4 +1,4 @@
-package controllers; 		//データベースから複数のメッセージ情報を取得して
+package controllers; 		//データベースから複数のメッセージ情報を取得するサーブレット
 
 import java.io.IOException;
 import java.util.List;
