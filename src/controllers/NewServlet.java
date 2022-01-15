@@ -1,9 +1,7 @@
 package controllers; //新規登録処理を行うコントローラー
 
 import java.io.IOException;
-import java.sql.Timestamp;
 
-import javax.persistence.EntityManager;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,7 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import models.Message;
-import utils.DBUtil;
 
 /**
  * Servlet implementation class NewServlet
@@ -43,7 +40,7 @@ public class NewServlet extends HttpServlet {
             RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/messages/new.jsp");
             rd.forward(request, response);
 
-        EntityManager em = DBUtil.createEntityManager();
+   /*     EntityManager em = DBUtil.createEntityManager();
         em.getTransaction().begin();
 
         //Messageのインスタンスを生成
@@ -68,6 +65,7 @@ public class NewServlet extends HttpServlet {
         response.getWriter().append(Integer.valueOf(m.getId()).toString());
 
         em.close();
+        */
     }
 
 }
